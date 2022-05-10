@@ -3,16 +3,20 @@
 
 void print_contact_list(Contact contacts[], int nb_contacts)
 {
-	std::cout << std::setw(10) << "index | ";
-	std::cout << std::setw(10) << "first name | ";
-	std::cout << std::setw(10) << "last name | ";
-	std::cout << std::setw(10) << "nickname |" << std::endl;
-	for (int i = 0; i < nb_contacts; i++)
+	std::cout << std::endl << std::setw(11) << "index|";
+	std::cout << std::setw(11) << "first name|";
+	std::cout << std::setw(11) << "last name|";
+	std::cout << std::setw(11) << "nickname|" << std::endl;
+	std::cout << "--------------------------------------------" << std::endl;
+	for (int i = 0; i < nb_contacts ; i++)
 	{
-		std::cout << std::setw(10) << i << " |";
-		std::cout << std::setw(10) << contacts[i].first_name << " |";
-		std::cout << std::setw(10) << contacts[i].last_name << " |";
-		std::cout << std::setw(10) << contacts[i].nickname << " |" << std::endl;
+		std::cout << std::setw(10) << i << "|";
+		if (contacts[i].first_name.length() >= 10)
+			std::cout << std::setw(9) << contacts[i].first_name.substr(0, 8) << ".|";
+		else
+			std::cout << std::setw(10) << contacts[i].first_name << "|";
+		std::cout << std::setw(10) << contacts[i].last_name << "|";
+		std::cout << std::setw(10) << contacts[i].nickname << "|" << std::endl;
 	}
 	std::cout << std::endl << std::endl;
 }
