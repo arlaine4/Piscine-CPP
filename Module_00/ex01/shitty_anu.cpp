@@ -19,6 +19,11 @@ void print_contact_list(Contact contacts[], int nb_contacts)
 		std::cout << std::setw(10) << contacts[i].nickname << "|" << std::endl;
 	}
 	std::cout << std::endl << std::endl;
+	std::cin.clear();
+	int index(-1);
+	std::cin >> index;
+	if (index != -1 and (index >= 0 and index <= nb_contacts))
+		contacts[index].print_contact_data();
 }
 
 int main(int ac, char **av)
