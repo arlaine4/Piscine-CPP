@@ -1,5 +1,6 @@
 #include "contact.hpp"
 
+
 Contact::Contact(void)
 {
 	return;
