@@ -13,11 +13,6 @@ void Zombie::announce(void)
 	return ;
 }
 
-Zombie *Zombie::newZombie(std::string name)
-{
-	return (new Zombie(name));
-}
-
 Zombie::~Zombie(void)
 {
 	std::cout << "Destroying " << this->name << std::endl;

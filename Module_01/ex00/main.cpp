@@ -1,9 +1,12 @@
 #include "Zombie.hpp"
 
+
 int main(void)
 {
-	Zombie z("zombie test");
-	Zombie z2("zombie test 2");
-	Zombie *new_z;
-	new_z = z.newZombie("nouveau zombie tu connais");
+	Zombie james("James");
+	Zombie john("John");
+	Zombie *steven;
+	steven = james.newZombie("James little brother");
+	randomChump("Eden");
+	// delete steven;
 }
