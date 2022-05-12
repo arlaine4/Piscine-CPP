@@ -2,6 +2,7 @@
 
 Weapon::Weapon(const std::string type)
 {
+	std::cout << "\033[32mDeclaring\033[0m Weapon instance with name " << type << std::endl;
 	this->type = type;
 	return ;
 }
